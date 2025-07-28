@@ -4,10 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="card mb-4">
-            <div class="card-header">
-                <h5>Upload Photos</h5>
+            <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#uploadCollapse" role="button" aria-expanded="false" aria-controls="uploadCollapse">
+                <h5 class="mb-0">Upload Photos</h5>
+                <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="card-body">
+            <div class="collapse" id="uploadCollapse">
+                <div class="card-body">
                 <form id="uploadForm" action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
                     <div class="upload-area" id="dropZone">
                         <input type="file" id="fileInput" name="files[]" multiple style="display: none;" 
@@ -182,6 +184,20 @@
         fileList.appendChild(fileListElement);
         uploadBtn.disabled = false;
     }
+
+    // Toggle chevron icon on collapse
+    const uploadCollapse = document.getElementById('uploadCollapse');
+    const chevronIcon = document.querySelector('[data-bs-toggle="collapse"] .fa-chevron-down');
+    
+    uploadCollapse.addEventListener('show.bs.collapse', function () {
+        chevronIcon.classList.remove('fa-chevron-down');
+        chevronIcon.classList.add('fa-chevron-up');
+    });
+    
+    uploadCollapse.addEventListener('hide.bs.collapse', function () {
+        chevronIcon.classList.remove('fa-chevron-up');
+        chevronIcon.classList.add('fa-chevron-down');
+    });
 
     // Show loading spinners during form submission
     document.querySelectorAll('form').forEach(form => {
