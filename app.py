@@ -34,7 +34,7 @@ def get_datetime_original(path):
         print(f"Error reading {path}: {e}")
     return None
 
-def group_photos(seconds_threshold=180):
+def group_photos(seconds_threshold=60):
     photo_dir = app.config['UPLOAD_FOLDER']
     files = [f for f in os.listdir(photo_dir) if f.lower().endswith(tuple(f'.{ext}' for ext in ALLOWED_EXTENSIONS))]
     

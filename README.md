@@ -1,68 +1,68 @@
-# Photo Organizer Web App
+# 사진 정리 웹 애플리케이션
 
-A user-friendly web application for organizing photos into groups based on their capture time. This tool helps you easily group photos taken within a specified time interval and ungroup them when needed.
+촬영 시간을 기준으로 사진을 그룹으로 정리할 수 있는 사용자 친화적인 웹 애플리케이션입니다. 이 도구를 사용하면 지정된 시간 간격 내에 촬영된 사진을 쉽게 그룹화하고 필요할 때 그룹을 해제할 수 있습니다.
 
-## Features
+## 기능
 
-- **Upload Photos**: Drag and drop or click to upload multiple photos at once
-- **Group Photos**: Automatically group photos taken within a specified time interval
-- **Ungroup Photos**: Move all photos back to the main directory
-- **Responsive Design**: Works on both desktop and mobile devices
-- **Photo Previews**: See thumbnails of your photos and groups
+- **사진 업로드**: 드래그 앤 드롭이나 클릭으로 여러 장의 사진을 한 번에 업로드
+- **사진 그룹화**: 지정된 시간 간격 내에 촬영된 사진을 자동으로 그룹화
+- **그룹 해제**: 모든 사진을 메인 디렉토리로 다시 이동
+- **반응형 디자인**: 데스크톱과 모바일 기기에서 모두 작동
+- **사진 미리보기**: 사진과 그룹의 썸네일 확인
 
-## Prerequisites
+## 필수 조건
 
-- Python 3.7 or higher
-- pip (Python package installer)
+- Python 3.7 이상
+- pip (Python 패키지 설치 도구)
 
-## Installation
+## 설치 방법
 
-1. Clone or download this repository
-2. Navigate to the project directory
-3. Install the required packages:
+1. 이 저장소를 클론하거나 다운로드합니다.
+2. 프로젝트 디렉토리로 이동합니다.
+3. 필요한 패키지들을 설치합니다:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running the Application
+## 애플리케이션 실행
 
-1. Start the Flask development server:
+1. Flask 개발 서버를 시작합니다:
 
 ```bash
 python app.py
 ```
 
-2. Open your web browser and go to:
+2. 웹 브라우저를 열고 다음 주소로 접속합니다:
 
 ```
 http://localhost:5000
 ```
 
-## How to Use
+## 사용 방법
 
-1. **Upload Photos**:
-   - Click on the upload area or drag and drop your photos
-   - Supported formats: JPG, JPEG, PNG, CR2, ARW, NEF
+1. **사진 업로드**:
+   - 업로드 영역을 클릭하거나 사진을 드래그 앤 드롭하세요.
+   - 지원 형식: JPG, JPEG, PNG, CR2, ARW, NEF
 
-2. **Group Photos**:
-   - Enter the time interval (in seconds) for grouping
-   - Click "Group Photos"
-   - Photos taken within the specified time interval will be grouped together
+2. **사진 그룹화**:
+   - 그룹화할 시간 간격(초 단위)을 입력하세요.
+   - "사진 그룹화" 버튼을 클릭하세요.
+   - 지정된 시간 간격 내에 촬영된 사진들이 함께 그룹화됩니다.
 
-3. **Ungroup Photos**:
-   - Click "Ungroup All Photos" to move all photos back to the main directory
-   - This will also remove all empty group folders
+3. **그룹 해제**:
+   - "모든 사진 그룹 해제" 버튼을 클릭하여 모든 사진을 메인 디렉토리로 이동시킵니다.
+   - 이 작업은 빈 그룹 폴더들도 모두 제거합니다.
 
-## Project Structure
+## 프로젝트 구조
 
-- `app.py`: Main Flask application
-- `templates/`: HTML templates
-  - `base.html`: Base template with common structure
-  - `index.html`: Main page with photo upload and organization interface
-- `origin_photos/`: Directory where uploaded photos are stored
-- `requirements.txt`: Python dependencies
+- `app.py`: 메인 Flask 애플리케이션
+- `templates/`: HTML 템플릿
+  - `base.html`: 공통 구조를 가진 기본 템플릿
+  - `index.html`: 사진 업로드 및 정리 인터페이스가 있는 메인 페이지
+- `origin_photos/`: 업로드된 사진이 저장되는 디렉토리
+- `requirements.txt`: Python 의존성 파일
 
-## License
+## 라이선스
 
-This project is open source and available under the [MIT License](LICENSE).
+이 프로젝트는 [MIT 라이선스](LICENSE) 하에 오픈 소스로 제공됩니다.
